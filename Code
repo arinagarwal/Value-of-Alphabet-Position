@@ -1,0 +1,32 @@
+import java.util.*;
+import java.io.*;
+import java.math.*;
+
+/**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+class Solution {
+
+    public static void main(String args[]) {
+    //String n is user input, we find vlue of this string
+        Scanner in = new Scanner(System.in);
+        String n = in.nextLine();
+    // sum will hold the value of the string
+        int sum = 0;
+    //for loop iterates through all chars in n
+        for (int x = 0; x < n.length(); x++)
+        {
+            //we store one char with each iteration of the for loop, and convert it to ASCII to make adding to sum easier
+            char b = n.charAt(x);
+            int a = (int) b;
+            //if loop tests if the char is a valid character (not a space or a symbol)
+            if (a >= 65 && a <= 90 )
+            {
+                s += (a - 65);      // we subtract 65 since this is the ASCII value of capital A
+            }
+        }
+
+        System.out.println(sum); //Finally we print our sum
+    }
+}
